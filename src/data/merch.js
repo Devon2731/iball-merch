@@ -5,17 +5,17 @@ const merchList = [
     currencyCode: 'USD',
   },
   {
-    title: 'Bloop Shirt',
+    title: 'Bleep Shirt',
     amount: '$18.00',
     currencyCode: 'USD',
   },
   {
-    title: 'Bloop Shirt',
+    title: 'Blop Shirt',
     amount: '$18.00',
     currencyCode: 'USD',
   },
   {
-    title: 'Bloop Shirt',
+    title: 'Beep-Beep Shirt',
     amount: '$18.00',
     currencyCode: 'USD',
   },
