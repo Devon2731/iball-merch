@@ -28,7 +28,7 @@ export default function Nav() {
   type MenuItems = MenuItem[];
 
   const menuItems: MenuItems = [
-    { name: 'Home', href: '/product', external: false },
+    { name: 'Home', href: '/products', external: false },
     { name: 'About', href: '/about', external: false },
     { name: 'Contact', href: '/contact', external: false },
   ];
@@ -37,12 +37,15 @@ export default function Nav() {
 
   return (
     <Navbar
-      className="bg-black"
+      className="bg-black grid"
       isBordered
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
-      maxWidth="full"
-      classNames={{ toggle: 'text-white' }}
+      // maxWidth="full"
+      classNames={{
+        toggle: 'text-white m-2',
+        wrapper: 'grid grid-cols-3 grid-flow-row justify-center',
+      }}
     >
       {/* Hamburger Menu */}
       <NavbarContent
@@ -55,7 +58,8 @@ export default function Nav() {
           aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
         />
       </NavbarContent>
-      <NavbarContent justify="start">
+      {/* Logo */}
+      <NavbarContent>
         <NavbarBrand>
           <Image
             src="/iball247.png"
@@ -73,7 +77,8 @@ export default function Nav() {
             return (
               <NavbarItem key={link.name} isActive={isActive}>
                 <Link
-                  color="primary"
+                  // color="primary"
+                  className="text-white"
                   href={link.href}
                   isExternal={link.external}
                 >
@@ -103,6 +108,7 @@ export default function Nav() {
           })}
         </>
       </NavbarMenu>
+      <NavbarContent>{/* cart icon */}</NavbarContent>
       {/* </NavbarContent> */}
     </Navbar>
   );
