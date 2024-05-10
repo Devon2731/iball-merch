@@ -1,18 +1,17 @@
 import MerchCard from '../Cards/MerchCard';
-import merchList from '../../data/merch.js';
+import merchList from '@/app/_lib/data/merch';
+import { motion } from 'framer-motion';
 
 const Gallery = () => {
   console.log(merchList);
   return (
-    <>
-      {merchList.map((item) => {
-        return (
-          <>
-            <MerchCard key={item.title} merch={item} />
-          </>
-        );
-      })}
-    </>
+    <div className="flex gap-3 flex-wrap items-center justify-center">
+      {merchList.map((item) => (
+        <>
+          <MerchCard key={item.title} merch={item} />
+        </>
+      ))}
+    </div>
   );
 };
 
