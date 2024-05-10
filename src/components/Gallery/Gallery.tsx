@@ -1,5 +1,5 @@
 import MerchCard from '../Cards/MerchCard';
-import merchList from '../../data/merch.js';
+import merchList from '@/app/_lib/data/merch';
 import { motion } from 'framer-motion';
 
 const Gallery = () => {

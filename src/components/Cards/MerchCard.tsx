@@ -14,11 +14,12 @@ type merch = {
   title: string;
   amount: string;
   currencyCode: string;
+  image: string;
 };
 
 const MerchCard = ({ merch }: { merch: merch }) => {
   return (
-    <>
+    <div className="mt-4 rounded-md border">
       <motion.div
         animate={{
           x: 0,
@@ -31,7 +32,7 @@ const MerchCard = ({ merch }: { merch: merch }) => {
         }}
       />
       <Card
-        className="py-4 hover:-translate-y-1 hover:scale-103 duration-300 m-2 w-72 flex justify-center items-center"
+        className="py-4 hover:-translate-y-1 hover:scale-103 duration-300 m-2 w-72 flex justify-center items-center hover:border border-spacing-4"
         shadow="md"
         radius="md"
         isHoverable={true}
@@ -43,11 +44,11 @@ const MerchCard = ({ merch }: { merch: merch }) => {
         <CardBody className="overflow-visible py-2">
           {/* //! Replace with images we receive */}
           <Image
-            src={'https://picsum.photos/270'}
+            src={merch.image}
             height={270}
             width={270}
-            alt="placeholder image"
-            className="z-0 object-cover rounded-xl p-2"
+            alt={merch.title}
+            className="object-cover rounded-xl p-2 h-64"
             // quality={100}
             sizes="200px, 400px, 800px"
           />
@@ -59,7 +60,7 @@ const MerchCard = ({ merch }: { merch: merch }) => {
           </CardFooter>
         </CardBody>
       </Card>
-    </>
+    </div>
   );
 };
 
