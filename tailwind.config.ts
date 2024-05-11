@@ -11,7 +11,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        linkOrange: '#f97316',
+      slate:{ 
+        blue: "#E2E8F0",
+      },
+      
+      neutral: {
+       light : "#E5E5E5"
+        },
+       stone: {
+        grey: "#E7E5E4"
+          }
+        // linkOrange: "#f97316",
       },
     },
     darkMode: 'class',

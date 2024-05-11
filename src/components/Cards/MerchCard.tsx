@@ -19,12 +19,12 @@ type merch = {
 
 const MerchCard = ({ merch }: { merch: merch }) => {
   return (
-    <div className="mt-4 rounded-md border">
+    <div className="mt-20 rounded-md shadow-xl border hover:scale-105 hover:bg-stone-grey border-spacing-4">
       <motion.div
         animate={{
           x: 0,
           backgroundColor: '#000',
-          boxShadow: '10px 10px 0 rgba(0, 0, 0, 0.2)',
+          boxShadow: '10px 10px 0 rgb(0, 0, 0, 0.2)',
           position: 'fixed',
           transitionEnd: {
             display: 'none',
@@ -32,10 +32,10 @@ const MerchCard = ({ merch }: { merch: merch }) => {
         }}
       />
       <Card
-        className="py-4 hover:-translate-y-1 hover:scale-103 duration-300 m-2 w-72 flex justify-center items-center hover:border border-spacing-4"
-        shadow="md"
+        className="flex justify-center items-center "
+        shadow="lg"
         radius="md"
-        isHoverable={true}
+        // isHoverable={true}
       >
         <CardHeader className="">
           <h3>{merch.title}</h3>
