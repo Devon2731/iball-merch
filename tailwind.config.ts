@@ -11,14 +11,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-      
-        linkOrange: "#f97316",
+        linkOrange: '#f97316',
       },
     },
-  darkMode: 'class',
-  plugins: [], 
+    darkMode: 'class',
+    plugins: [nextui()],
   },
 };
-
 
 export default config;
