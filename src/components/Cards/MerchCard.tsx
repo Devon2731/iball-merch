@@ -19,7 +19,7 @@ type merch = {
 
 const MerchCard = ({ merch }: { merch: merch }) => {
   return (
-    <div className="mt-20 rounded-md shadow-xl border hover:bg-stone-grey border-spacing-4">
+    <div className="mt-20 rounded-md shadow-xl border hover:scale-105 hover:bg-stone-grey border-spacing-4">
       <motion.div
         animate={{
           x: 0,
