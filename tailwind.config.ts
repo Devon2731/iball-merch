@@ -11,23 +11,22 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-      slate:{ 
-        blue: "#E2E8F0",
-      },
-      
-      neutral: {
-       light : "#E5E5E5"
+        slate: {
+          blue: '#E2E8F0',
         },
-       stone: {
-        grey: "#E7E5E4"
-          }
+
+        neutral: {
+          light: '#E5E5E5',
+        },
+        stone: {
+          grey: '#E7E5E4',
+        },
         // linkOrange: "#f97316",
       },
     },
-  darkMode: 'class',
-  plugins: [], 
+    darkMode: 'class',
+    plugins: [nextui()],
   },
 };
-
 
 export default config;
